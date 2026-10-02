@@ -1,19 +1,18 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 
-// Practice 7 — Your Name
-// CIS 5 Week 07 · Menu replay
+// Homework 7 — Your Name
+// CIS 5 Week 07 · Odd and Even
 
 int main() {
-  int choice = 0;
-  do {
-    std::cout << "1) Greet  2) Countdown  3) Quit\n";
-    std::cout << "Choice: ";
-    std::cin >> choice;
+  const int N = 20;
+  int values[N];
 
-    // TODO: action 1, action 2, quit, else "Not a choice."
-    // TODO: at least one for-loop in an action
-  } while (choice != 3);
+  srand(static_cast<unsigned>(time(nullptr)));
+  for (int i = 0; i < N; ++i) {
+    values[i] = rand() % 100;
+  }
 
-  std::cout << "Bye.\n";
   return 0;
 }
